@@ -75,17 +75,7 @@ public long gcd01(long m, long n) {
 
 ```java
 public long gcd02(long m, long n) {
-    if (m < n) {
-        long k = m;
-        m = n;
-        n = k;
-    }
-    if (m % n != 0) {
-        long temp = m % n;
-        return gcd02(n, temp);
-    } else {
-        return n;
-    }
+    return n == 0 ? m : gcd02(n, m % n);
 }
 ```
 
